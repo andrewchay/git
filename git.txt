@@ -1,0 +1,42 @@
+git init 	: initiate a git project in a certain folder
+git clone https://github.com/adina/2013-09-04-uiowa.git 	: clone an existing git project from Github.
+git config --global user.name "HClocal"
+git config --global user.email "haochai2@gmail.com"
+git config --global alias.ch checkout
+git config --global alias.co commit
+git config --global alias.st status
+git config --global alias.br branch
+git config --global alias.hist 'log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
+git config --global alias.type 'cat-file -t'
+git config --global alias.dump 'cat-file -p'
+
+git add filename 	: add / stage a file
+git commit -m "some messages" 	: submit a commit
+git status	: check the status
+git hist 	: check the history, originally git log.
+git mv filename1 filename2 	: move or rename a file
+git rm filename 	: remove a file
+git reset HEAD filename 	: unstage filename
+git reset --soft HEAD^ 	: uncommits the last commit
+git checkout -- filename 	: unmodifies an unstaged filename
+git checkout <hash> : checkout to a hash tag
+git tag v1 : name current commit as v1
+git tag : view existing tags
+git checkout v1^ : checkout to v1
+
+git branch : list the branches of the local repository
+git branch [branch_name] : create a branch
+git branch -d [branch_name] : delete a branch
+git checkout [branch_name] : move to a branch
+git checkout -b [branch_name] : create and move to a branch
+git merge [branch_name] : merge [branch_name] onto current branch
+git reset --hard HEAD : if you tried to pull or merge, and it resulted in a lot of conflicts you don't want to deal with.
+git reset --hard ORIG_HEAD : you merged a branch which resulted in a fast forward, and you want to cancel it.
+
+git remote : list the remote servers you have configured.
+git remote add aftHD https://github.com/andrewchay/aftHD.git : add the url as a remote
+git remote rm name : remove the remote name
+git fetch aftHD : fetch the branches on the remote
+git merge aftHD/master : merge the remote branch onto the current local branch
+git push aftHD master : pushed master onto remote aftHD
+
